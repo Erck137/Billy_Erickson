@@ -298,8 +298,7 @@ group' x = x
 --pembatas
 
 splitAt' _ [] = ([],[])
-splitAt' a (x:xs)
-  | a == 0 = ([], (x:xs))
+splitAt' 0 (x:xs) = ([], (x:xs))
 splitAt' a (x:xs) = ((take a (x:xs)), (drop a (x:xs)))
 
 --pembatas
